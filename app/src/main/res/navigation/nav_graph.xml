@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/scheduleListFragment">
+
+    <fragment
+        android:id="@+id/AddScheduleFragment"
+        android:name="com.ampaschal.ischedule.AddScheduleFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_add_schedule"/>
+
+    <fragment
+        android:id="@+id/scheduleListFragment"
+        android:name="com.ampaschal.ischedule.ui.ScheduleListFragment"
+        android:label="fragment_schedule_list"
+        tools:layout="@layout/fragment_schedule_list" >
+        <action
+            android:id="@+id/action_scheduleListFragment_to_AddScheduleFragment"
+            app:destination="@id/AddScheduleFragment" />
+    </fragment>
+</navigation>
